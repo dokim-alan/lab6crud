@@ -57,7 +57,7 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        session.setAttribute("message", "[" + action + "]"+ " is processed."); //bb
+
         UserService us = new UserService();
         RoleService rs = new RoleService();
         Role roles = null; //new Role(); //null;
@@ -75,7 +75,7 @@ public class UserServlet extends HttpServlet {
             } catch (Exception ex) {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
-            session.setAttribute("message", email + "before added."); //aa
+            
             try {
                 us.insert(email, true, firstname, lastname, password, roles);
                 session.setAttribute("message", email + " has been created.");
@@ -117,7 +117,7 @@ public class UserServlet extends HttpServlet {
             
             try {
                 us.update(email, true, firstname, lastname, password, roles);
-                session.setAttribute("message", email + " has been updated.");
+                session.setAttribute("message", email + " has been edited.");
             } catch (Exception ex) {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
             }  
