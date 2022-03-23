@@ -11,9 +11,10 @@ public class RoleService {
         List<Role> roles = this.roleDB.getAll();
         return roles;
     }
-    
+    /*
     public String getName(int roleId) throws Exception { 
         String name = this.roleDB.getName(roleId);
         return name;
     }
+*/
 }

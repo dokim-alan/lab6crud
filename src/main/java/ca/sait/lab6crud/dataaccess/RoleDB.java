@@ -39,7 +39,7 @@ public class RoleDB {
         
         return roles;
     }
-    
+    /*
     public String getName(int roleId) throws Exception {   
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
@@ -60,4 +60,5 @@ public class RoleDB {
 
         return roleName;
     }
+*/
 }
